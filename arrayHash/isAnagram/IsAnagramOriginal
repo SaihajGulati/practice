@@ -10,14 +10,14 @@ class Solution(object):
     - what is an anagram --> same leters and same amount of all letters
     - maybe make a dictionary and then see is same
     - 
-    - better memory than tricks one possibly because of the pre-check of if exists
+    - better runtime and MUCH BETTER memory than tricks one because of not needing length or anything as it just iterates through until hits end
     """
     def isAnagram(self, s, t):
         if len(s) != len(t):
             return False
         dictS = {}
         #goes through s and then if the letter is in dict, then adds 1 to count, otherwise, creates new entry
-        for i in len(s):
+        for i in s:
             if i in dictS:
                 dictS[i] += 1
             else:

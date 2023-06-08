@@ -12,7 +12,9 @@ class Solution(object):
         currLetters = set()
         currLetters.add(s[left])
         maxLength = 1
-
+        
+        ##could do for loop here for right and then below if needs to be why, but this is more intuitive for me 
+        ##(evens out ish because this requires more checking of right against length and that checks more if right is in currLetters) 
         while right < len(s):
             ##get a duplicate letter, change window
             if (s[right] in currLetters):

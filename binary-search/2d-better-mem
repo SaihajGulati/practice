@@ -16,7 +16,7 @@ class Solution(object):
             lastOfRow = matrix[m][-1]
             firstOfRow = matrix[m][0]
             ##if is first row, can't check one before, so smarter to check first and last of row
-            ##checking here if equal at the start saves memory because don't have to do later, but is slower than just checking the smart way as in the other file
+            ##checking here if equal at the start saves memory because don't have to have the loop or anything in mem later, but is slower than just checking the smart way as in the other file
             if (lastOfRow == target):
                 return True
             elif (firstOfRow == target):

@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution(object):
     #iterative
-    #T: O(n) M: O(1) which is why best solution, because no lists or data strucctures and no recursive stack or anything to unpack or access
+    #T: O(n) M: O(1) which is why best solution, because no lists or data structures and no recursive stack or anything to unpack or access
     def reverseList(self, head):
         """
         :type head: ListNode

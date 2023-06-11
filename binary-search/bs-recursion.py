@@ -9,6 +9,8 @@ class Solution(object):
         def binarySearch(l, r):
             if l > r:
                 return -1
+            ##python divides with decimials by default BUT converts it to int where needed
+            ##so technically need this if want int but don't need because when use m to access array, converted to int
             m = int((l+r)/2)
             if nums[m] > target: 
                 r = m - 1

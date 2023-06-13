@@ -12,6 +12,7 @@ class Solution(object):
         """
         
         #head recursion since add 1 after
+        #is in-order dfs but recursive
         if not root:
             return 0
 

@@ -11,7 +11,7 @@ class Solution(object):
         :rtype: int
         """
     
-        #iterative dfs
+        #iterative pre-order dfs
 
         stack = [[root, 1]]
         maxDepth = 0
@@ -22,7 +22,8 @@ class Solution(object):
 
             if (node):
                 maxDepth = max(maxDepth, depth)
-                stack.append([node.left, depth + 1])
+                #append right first so that left is seen first (bc it's at top by being added second) in traditional pre-order dfs when pop from stack
                 stack.append([node.right, depth + 1])
+                stack.append([node.left, depth + 1])
 
         return maxDepth

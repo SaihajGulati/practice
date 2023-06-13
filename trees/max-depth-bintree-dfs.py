@@ -23,6 +23,8 @@ class Solution(object):
             if (node):
                 maxDepth = max(maxDepth, depth)
                 #append right first so that left is seen first (bc it's at top by being added second) in traditional pre-order dfs when pop from stack
+                #is pre-order because notice how parent depth is checked before children's is
+                #is dfs bc keep on prioritizing children
                 stack.append([node.right, depth + 1])
                 stack.append([node.left, depth + 1])
 

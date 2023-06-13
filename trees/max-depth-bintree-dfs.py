@@ -15,7 +15,9 @@ class Solution(object):
 
         stack = [[root, 1]]
         maxDepth = 0
-        depth = 0
+        #starting with maxDepth = 0 even though put 1 into stack is smart because then if root is null, return 0 we will never enter if statement
+        #BUT by having 1 in the stack entry, you get the correct depth for each item in the stack in the likely case the root is not null
+
         while (stack):
             #can do this to get values from two elements from array-->ofc you can it's python!
             node, depth = stack.pop()

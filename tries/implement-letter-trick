@@ -1,7 +1,7 @@
 class Node(object):
-    def __init__(self, char = "", word = False):
+    def __init__(self, word = False):
         self.word = word
-        #use the fact that it is letters as a trick to aviod using dictionary, though dictionary works too
+        #uses fact that letters can only be 26 different as is only lowercase as way to avoid using dictionary
         self.next = [None]*26
 
 class Trie(object):
@@ -25,7 +25,7 @@ class Trie(object):
             #if none, means does not already exist
             if not curr.next[index]:
                 #add a dictionary entry for this letter and new node
-                curr.next[index] = Node(c)
+                curr.next[index] = Node()
             curr = curr.next[index]
         curr.word = True
 

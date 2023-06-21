@@ -9,12 +9,15 @@ class Solution:
 
         def bfs(r,c):
             #adds passed spot to start of q (so is start of search)
+            #smart to use deque because do convert to dfs, all have to do is change popLeft below to pop(), 
+#and that becomes dfs by jumping to last direction added each time which means goes to end of each branch instead of by level
+#here dfs ends up basically doing same thing as bfs though as they are marked as visited when first seen/added to queue
             q = deque()
             visited.add((r,c))
             q.append((r,c))
         
             while q:
-                row,col = q.popleft()
+                row,col = q.popleft() #here could be pop for pseudo dfs
                 directions= [[1,0],[-1,0],[0,1],[0,-1]]
             
             #this for loop giving dr dc like this so easily is crazy

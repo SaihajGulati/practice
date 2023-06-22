@@ -10,7 +10,7 @@ class Solution(object):
         two = 0
 
         #has to go backwards
-        #reversed means biggest is still excluded
+        #reversed means biggest is still excluded, so this goes from last index of cost (len(cost)-1) to 0th index
         for i in reversed(cost):
             temp = min(i + one, i + two)
             two = one

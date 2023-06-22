@@ -16,5 +16,5 @@ class Solution(object):
             two = one
             one = temp
 
-        #ends with last one being the oth cost index, so need to min that too to decide which to start at
+        #ends with last one being the 0th cost index, so need to min 0th and 1st to get true min since can start at either one
         return min(one, two)

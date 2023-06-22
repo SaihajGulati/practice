@@ -1,0 +1,20 @@
+class Solution(object):
+    def minCostClimbingStairs(self, cost):
+        """
+        :type cost: List[int]
+        :rtype: int
+        """
+        #found this solution by drawing tree and dynamic programming kinda like first climbing stairs neet video NOT the video for this problem
+        #bc using cost in for loop
+        one = 0
+        two = 0
+
+        #has to go backwards
+        #reversed means biggest is still excluded
+        for i in reversed(cost):
+            temp = min(i + one, i + two)
+            two = one
+            one = temp
+
+        #ends with last one being the oth cost index, so need to min that too to decide which to start at
+        return min(one, two)

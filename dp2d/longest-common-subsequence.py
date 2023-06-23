@@ -22,8 +22,9 @@ class Solution(object):
             #same thing where bigger so right can be 0
             #thisRow = [0]*(len(text2) + 1)
 
-            #don't need a 2d array or entire array for this as right one always switches to one just did and then diagonal needs to access down next time possibly, but once does, can put right into that spot
-            
+            #don't need a 2d array or any array at all for this as right one always switches to one just did and then diagonal needs to access down AND to right (diagonal) only once
+            #so, if make tempcurr variable, then set down the diagonal one to old right, and then change right, works because
+            #next iteration will be one j back, so will not access the down you just set as that is one right of diagonal of that now
             #set to zero as first right value is off end so always 0
             right = 0
 

@@ -5,6 +5,7 @@ class Solution(object):
         :type text2: str
         :rtype: int
         """
+        #FinalSolution -- T: O(nm) M: O(n)
         #trick with this solution is that dp handles the relative order staying same as either right and down, or diagonal
         #suproblem is finding LCS of subset of both words
         #two cases though for relation depending on whether equal or not

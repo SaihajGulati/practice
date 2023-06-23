@@ -4,6 +4,8 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        #Final Solution -- T: O(n) M: O(1)
+        
         one, two = 1, 1
 
         #only n - 1 times
@@ -14,5 +16,5 @@ class Solution(object):
             #move one back to where curr is right now for next
             one = temp
         
-        #runs 4 times, where last one is last temp, which is answer
+        #with ex, runs 4 times, where last one is last temp, which is answer
         return one

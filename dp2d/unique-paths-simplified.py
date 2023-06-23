@@ -5,7 +5,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        #FinalSolution -- T: O(nm) M: O(n)
+        #Final Solution -- T: O(nm) M: O(n)
         #need to set down here because will changed always but starting here
         #by setting to n vs n-1, save cases where n-1 = 0 and have to add if statements that slow code
         #also in big scheme of things, n vs n-1 size (which ends up same big o mem complexity) down vs two if statements chekcs at the start evens out tbh

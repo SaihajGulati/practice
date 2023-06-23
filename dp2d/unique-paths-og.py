@@ -5,6 +5,8 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        #FinalSolution -- T: O(nm) M: O(n)
+        
         if m <= 1:
             return m
         elif n <= 1:

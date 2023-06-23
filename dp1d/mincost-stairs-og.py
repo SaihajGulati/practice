@@ -4,6 +4,8 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
+        #Final Solution -- T: O(n) M: O(1)
+        
         #found this solution by drawing tree and dynamic programming kinda like first climbing stairs neet video NOT the video for this problem
         #bc using cost in for loop
         one = 0

@@ -11,6 +11,10 @@ class Solution(object):
         #also in big scheme of things, n vs n-1 size down vs two if statements chekcs at the start evens out tbh
         down = [1] * n
         
+        #even though down array is bigger up top, good to do everything with 1s decided instead of 0 
+        #because saving one iteration each time for m (when m is large ) rows is pretty useful
+        #so is saving a row of up to n (when n is large) size
+        
         #order of this does not have to be reversed as never access m, but have to do m-1 times
         for i in range(m - 1): 
             #set each time to 1 because this represents right and will always start with one in rightmost

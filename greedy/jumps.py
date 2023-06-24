@@ -1,11 +1,7 @@
-class Solution(object):
-    def canJump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        #T: O(n) M: O(1)
-        #original goal is end
+#python3 activated for better memory for things under the hood
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+       #original goal is end
         goal = len(nums)-1
 
         #start at second to last index because only need to get to last index
@@ -16,4 +12,4 @@ class Solution(object):
                 goal = i
 
         #if there is a solution, at the end can reach goal and so goal will be at start
-        return goal == 0
+        return goal == 0 

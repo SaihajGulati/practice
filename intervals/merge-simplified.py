@@ -14,8 +14,10 @@ class Solution:
             #then is overlapping as is guaranteed by sort that start is less than or equal to,
             #and equal to case is handled by fact end of each intervals has to be equal to or bigger than its start
             if prevEnd >= start:
+                #set the previously inserted one's end to the max of the two bc is sorted by start so never know which end is bigger 
+                #(second could be fully enveloped by first)
                 result[-1][1] = max(prevEnd, end)
-            else: #is not overlapping so add this one
+            else: #is not overlapping with previuosly inserted so add this one
                 result.append([start, end])
         
         #just putting into array by default, and editing there if needed, 

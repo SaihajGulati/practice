@@ -1,6 +1,8 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         result = []
+        #getting rid of added boolean means in that if statement can return immediately which fills in rest of array faster
+        #than if checked all if statements for subsequent times when know have added
         #T: O(n) M: O(n)
         #could do diff ways with split up looping to append at end and start, but ends up being more complex for same runtime bc deep copy requires looping over all anyways, just less code
         for i in range(len(intervals)):
@@ -20,5 +22,7 @@ class Solution:
                 newInterval[1] = max(newInterval[1], intervals[i][1])
         
         #this is needed to handle cases where needs to be inserted at end
+        #don't have to check if added, because once is added, is immediately returned with rest of list copied over
+        #so only gets here if not yet added
         result.append(newInterval)
         return result

@@ -17,6 +17,7 @@ class Solution:
             #r-l will be one less since is indexes
             for i in range(r-l):
                 #save first one, which will put in at end
+                #bc trick is to go backwards so don't need a trillion temps
                 temp = matrix[t][l + i]
                 
                 #rotate process

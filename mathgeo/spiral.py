@@ -6,6 +6,7 @@ class Solution:
         b = len(matrix)-1
         result = []
 
+        #do both less than to skip garbage cases of ending that are too hard to handle otherwise
         while l < r and t < b:
             #fill in top row
             #r not r+1 because exclusivity helps here so next loop can fill
@@ -30,14 +31,14 @@ class Solution:
             r -= 1
             t += 1
             b -= 1
-        #need check for case where all equal, so one left which is never entered
+            
         if (l < r and t == b): #means one row left
             for i in range(l, r + 1):
                 result.append(matrix[t][i])
         elif (t < b and l == r): #means column left
             for i in range(t, b + 1):
                 result.append(matrix[i][r])
-        elif (t == b and l == r): #both equal
+        elif (t == b and l == r): #both equal so literally one value left
             result.append(matrix[t][l])
-        #else is just good to go as both are out of bounds
+        #if get here, is just good to go as both are out of bounds
         return result

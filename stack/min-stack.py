@@ -11,6 +11,7 @@ class MinStack(object):
         """
         self.stack.append(val)
         #min function, and conditional expression, and -1 for index of last
+        #min stack of min value each time push, so when pop have correct min value each time as you cannot pop more than push
         minStackValue = min(val, self.minStack[-1]) if self.minStack else val
         self.minStack.append(minStackValue)
 

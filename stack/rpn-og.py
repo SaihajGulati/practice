@@ -3,6 +3,8 @@ class Solution:
         #edge case written down bc of constraint giving this
         if len(tokens) == 1:
             return int(tokens[0])
+
+        #T: O(n) bc is O(2n) M: O(n) similarly
         stack = []
         for i in tokens:
             #can't really check if is number, but can check if is operator by being smart

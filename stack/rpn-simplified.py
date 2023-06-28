@@ -4,6 +4,7 @@ class Solution:
         if len(tokens) == 1:
             return int(tokens[0])
         stack = []
+        #T: O(n) bc is O(2n) M: O(n) similarly
         for i in tokens:
             #don't have to do prechecks, because if isn't oeprator defined below, is a number by defintion
             #remember number 1 is older one, so two pops away

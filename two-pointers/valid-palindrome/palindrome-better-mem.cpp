@@ -20,6 +20,9 @@ two pointers, one going forward and one going back and comparing each time if is
         int back = s.length()-1;
 
         //will go until collide 
+        //works because will only collide when seen same amount of letters
+       //bc even thouogh will not be middle of actual string depending on punctuation, only time both move together is when you both see a letter
+       //SO fluff is cut out, and only collide in middle of valid version of string, bc both have have moved same amount over course of valid letters
         while (front < back)
         {
             if (!isValid(s[front]))

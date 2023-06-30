@@ -5,9 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         stack  = []
-        """
-        makes code a lot shorter but if statements are faster runtime and less memory
-        """
         parens = {
             ")" : "(",
             "]" : "[",

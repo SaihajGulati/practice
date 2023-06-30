@@ -14,6 +14,7 @@ class Solution(object):
             #bc only checks keys
             #if is an open one, want to add to stack
             #not in use is genius, but only if guaranteed to only get type of paren
+            #otherwise checking if i == "(" or ... etc etc for all three is the way to go
             if i  not in parens:
                 stack.append(i)
             #if get here, i is a closed parens type

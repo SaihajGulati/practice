@@ -13,7 +13,7 @@ class Solution(object):
         for i in s:
             #bc only checks keys
             #if is an open one, want to add to stack
-            #not in use is genius
+            #not in use is genius, but only if guaranteed to only get type of paren
             if i  not in parens:
                 stack.append(i)
             #if get here, i is a closed parens type

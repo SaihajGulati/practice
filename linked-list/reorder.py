@@ -7,15 +7,16 @@ class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
         Do not return anything, modify head in-place instead.
+        T: O(n) but technically O(3n/2) M: O(1) which is legendary
         """
         slow, fast = head, head.next
         
-        #find middle
+        #find middle O(n/2)
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next       
 
-        #reverse time for second half
+        #reverse time for second half O(n/2)
         #start at middle if odd length, or one past if even length
         curr = slow.next
         #prev meeds to be none so that end of reversed list is None
@@ -31,7 +32,7 @@ class Solution:
             #curr is moved one up
             curr = temp
 
-        #merge time of two halves
+        #merge time of two halves O(n/2)
         #slow is last one will need to attach to
         #now merge, only need to go up to and incl slow
         #curr starting with left one

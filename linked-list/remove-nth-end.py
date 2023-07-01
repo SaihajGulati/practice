@@ -7,6 +7,10 @@ class Solution:
         left = dummy
         right = head
 
+        #moves to next n times, so right ends up being n+1th node to right
+        #so if n is length of list, then right ends up off
+        #next while loop will never enter, and left will stay dummy
+        #which is what we want so that left can connect to one it's supposed to without issue and checking if head specially
         for i in range(n):
             right = right.next
 
@@ -20,5 +24,6 @@ class Solution:
         deleting = left.next
         left.next = deleting.next
         del deleting
-        
+
+        #bc is dummy at start
         return dummy.next

@@ -7,8 +7,8 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         curr = head
         prev = None
-        #double reverse is the strat
-
+        #double reverse is the strat T: O(n)but really O(2n) M: O(1)
+        
         #reverse until get to end
         while curr:
             temp = curr.next

@@ -15,6 +15,7 @@ class Solution(object):
         
         def reverseList(curr, prev):
             if (not curr):
+                #so can return new head all the way up
                 return prev
 
             temp = curr.next

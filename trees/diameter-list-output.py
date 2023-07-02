@@ -6,6 +6,8 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        #objectively worst memory wise compared to other solutions
+        #T: O(V) M: O(2V) bc storing two for each
         def dfs(curr):
             #gotta do a while loop
             if not curr:

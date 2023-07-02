@@ -6,6 +6,9 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        #if asked to do this without referenced variable outside, could do with two values in array returned each time
+        #then would be like isBalanced problem, where at bottom call return dfs(root)[0] which would be max diameter
+        
         #in python arrays are automatically accessible nonlocally by nested function so wouldn't even have to pass like this
         def dfs(curr, maxLength):
             #gotta do a while loop

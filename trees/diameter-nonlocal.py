@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        #T: O(n) M: O(1) bc only have one thing in memory, which is res
         res = 0
         def dfs(curr):
             nonlocal res

@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        #T: O(n) M: O(1) bc only have one thing in memory, which is res
         #like with diameter problem, could also do array of size 1 for holding True or False
         #could also do with if returned two values in an array, one being if balanced and other being height
         #then if statement would set the balanced to false if already false and true only if both sides show balanced and difference is 1 or less

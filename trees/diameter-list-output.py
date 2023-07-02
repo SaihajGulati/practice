@@ -1,0 +1,23 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        def dfs(curr):
+            #gotta do a while loop
+            if not curr:
+                #-2 so that when get past end and add 2, get to 0 for length at that spot
+                return [0, 0]
+
+            #get max length going down
+            maxLeft, left = dfs(curr.left)
+            maxRight, right = dfs(curr.right)
+
+            #[max diameter, height]
+            return [max(left + right, maxLeft, maxRight), 1 + max(left, right)]
+
+      #return first value of output pushed up
+        return dfs(root)[0]

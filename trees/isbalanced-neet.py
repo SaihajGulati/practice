@@ -7,7 +7,7 @@
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         #T: O(V) M: O(2V) bc storing two for each
-        #worse memory wise because storing two for each
+        #WORST memory wise because storing two for each
         def dfs(root):
             if not root:
                 return [True, 0]

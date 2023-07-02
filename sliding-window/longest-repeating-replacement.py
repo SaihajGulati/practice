@@ -26,6 +26,7 @@ class Solution:
             if (r - l + 1 - maxCount) > k:
             """if used array or hashmap of size 26 to track count:
             while (r - l + 1 - max(count.values())) > k:
+            ***don't need though because can overcompensate and check correctly by just checking maxCount ever seen
             """"
                 #need to reduce count first so do it for correct l
                 #works even though don't reset maxCount because maxCount of all maxCounts is going to be in the longest string we can do with k

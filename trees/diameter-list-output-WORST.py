@@ -19,7 +19,8 @@ class Solution:
             maxRight, right = dfs(curr.right)
 
             #[max diameter, height]
-            #compare new diameter with left and right, and max diameters seen in each subtree
+            #compare new diameter with left and right, and max diameters seen in each subtree, 
+            #which will ensure all maxes are being checked against each other by the time we recruse back to the top
             return [max(left + right, maxLeft, maxRight), 1 + max(left, right)]
 
       #return first value of output pushed up

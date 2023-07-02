@@ -12,7 +12,7 @@ class Solution:
             count[c] += 1
             
             """if wasn't defaultdict, could do this:
-            count[s[r]] = 1 + count.get(s[r], 0)
+            count[c] = 1 + count.get(c, 0)
             """
             
             #don't need maxLetter because if you notice, each time we use just the maxCount

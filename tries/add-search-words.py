@@ -9,13 +9,14 @@ class Node:
         #don't worry about getter/setter because in most languages will be a struct for node, which means everything is default publicc
 
 class WordDictionary:
-
+    #memory is much worse with recursion all the way because have to add to stack
+    #hence, other solution is better because minimizes recursion while still being easily codable
     def __init__(self):
         #smart to do so here so don't have to worry below
         #need root like this instead of head pointer because:
         #allow for true root always being maintained because otherwise you never know the true root of the tree because it couold be rewritten anytime a word with a different first letter is added
         self.root = Node()
-        
+    
     def addWord(self, word: str) -> None:
         curr = self.root
         for c in word:

@@ -22,11 +22,11 @@ class WordDictionary:
         for c in word:
             #checks if c is a key
             if c not in curr.children:
-                curr.children[i] = Node()
+                curr.children[c] = Node()
             
             #this will set curr to the next node
             #have to do regardless of whether just added or already exists
-            curr = curr.children[i]
+            curr = curr.children[c]
 
         #at end of loop, need to set the node to being the end of a word
         #is already stored as curr so bet
@@ -52,10 +52,10 @@ class WordDictionary:
             #is just a letter so do more normal task
             else:
                 #first check if there is even a child node for this letter
-                if not curr.children[c]:
+                if c not in curr.children:
                     return False
                 else: #is a letter seen and need to move on
-                    return searchHelper(index + 1, curr.children[index])
+                    return searchHelper(index + 1, curr.children[c])
 
 
         return searchHelper(0, self.root)

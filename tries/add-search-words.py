@@ -36,16 +36,16 @@ class WordDictionary:
         #in another language, would have to be nonnested so would need to pass word string too
         #better to pass index than doing with just word and curr passed, because then have to pass sliced substring each time
         #which passes a copy and has memory overhead
-        def searchHelper(index, word, curr):
+        def searchHelper(index, curr):
             #curr at the end will be the last child/letter used
             if index == len(word):
                 return curr.isWord
-            c = word[0]
+            c = word[index]
             if c == ".":
                 #this will go through only the values so all the noes that exist
                 #also why hashmap is better bc won't chekc all 26 to figure out which exist and which don't and avoid some non checking stuff
-                for n in curr.children.values():
-                    if searchHelper(index + 1, word, n):
+                for child in curr.children.values():
+                    if searchHelper(index + 1, child):
                         return True
                 #if make it here, didn't find a letter that's a child and valid for this word
                 return False
@@ -55,10 +55,10 @@ class WordDictionary:
                 if not curr.children[c]:
                     return False
                 else: #is a letter seen and need to move on
-                    return searchHelper(index + 1, word, curr.children[index])
+                    return searchHelper(index + 1, curr.children[index])
 
 
-        return searchHelper(0, word, self.root)
+        return searchHelper(0, self.root)
             
 
 

@@ -22,11 +22,11 @@ class WordDictionary:
         for c in word:
             #checks if c is a key
             if c not in curr.children:
-                curr.children[i] = Node()
+                curr.children[c] = Node()
             
             #this will set curr to the next node
             #have to do regardless of whether just added or already exists
-            curr = curr.children[i]
+            curr = curr.children[c]
 
         #at end of loop, need to set the node to being the end of a word
         #is already stored as curr so bet
@@ -37,10 +37,6 @@ class WordDictionary:
         #better to pass index than doing with just word and curr passed, because then have to pass sliced substring each time
         #which passes a copy and has memory overhead
         def searchHelper(index, curr):
-            #curr at the end will be the last child/letter used
-            if index == len(word):
-                return curr.isWord
-
             #does most of the word iteratively instead of recursively so that way saves some mem
             for i in range(index, len(word)):
               c = word[i]
@@ -60,8 +56,8 @@ class WordDictionary:
                   #is a letter seen and need to move on
                   curr = curr.children[c]
             
-              #if get to end of for loop, need to check if the last indicator shows this is a word
-              return curr.isWord
+            #if get to end of for loop or function, need to check if the last indicator shows this is a word, as the range went through is 0 or reached end of all letters
+            return curr.isWord
 
         return searchHelper(0, self.root)
             

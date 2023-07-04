@@ -41,6 +41,7 @@ class WordDictionary:
             if index == len(word):
                 return curr.isWord
 
+            #does most of the word iteratively instead of recursively so that way saves some mem
             for i in range(index, len(word)):
               c = word[i]
               if c == ".":

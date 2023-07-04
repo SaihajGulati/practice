@@ -56,7 +56,9 @@ class WordDictionary:
                   #is a letter seen and need to move on
                   curr = curr.children[c]
             
-            #if get to end of for loop or function, need to check if the last indicator shows this is a word, as the range went through is 0 or reached end of all letters
+            #if get to end of for loop or function, reached end of word
+            #need to check if the last indicator shows this is a word, as the range went through is 0 or reached end of all letters
+            #last curr is last letter so can check directly and return whether word matches
             return curr.isWord
 
         return searchHelper(0, self.root)

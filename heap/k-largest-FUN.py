@@ -8,6 +8,7 @@ class Solution:
         #averagish case is O(n) with O(1) extra memory since setting to neg in place, but if k is close to n then approaches nlogn time complexity
 
         #make negative so that when python does minheap which is all it can do, we get max heap
+        #doing in place much better memory wise O(1) than list comprehension which creates copy and thus adds O(n) extra memory with same time
         for i in range(0, len(nums)):
             nums[i] = - nums[i]
 

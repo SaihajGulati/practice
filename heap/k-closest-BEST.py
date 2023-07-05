@@ -19,7 +19,7 @@ class Solution:
 
         res = []
 
-        #O(k)
+        #O(klogn) and k can be worst case n so lowkey becomes nlogn anyways if k is worst case n
         for i in range(k):
             #this variable naming setup in python is cracked
             dist, x, y = heapq.heappop(minHeap)

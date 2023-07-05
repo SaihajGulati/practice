@@ -20,7 +20,7 @@ class Solution:
 
         #will populate min heap sorted by distance
         #x, y strat here is cracked
-        #O(nlogn) operation
+        #O(nlogn) operation bc each push requires make logn swaps and doing n times
         for x, y in points:
             heapq.heappush(minHeap, Point(x, y))
         

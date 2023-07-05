@@ -2,6 +2,7 @@ class KthLargest:
 
     def __init__(self, k, nums):
         # minHeap w/ K largest integers
+        #heap is by default minheap, and by keeping on popping, we keep on taking away smallest one
         self.minHeap, self.k = nums, k
         heapq.heapify(self.minHeap)
         while len(self.minHeap) > k:

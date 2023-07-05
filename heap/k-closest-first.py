@@ -12,6 +12,8 @@ class Point:
 
 class Solution:
   #since ends up nlogn bc of separate pushes, is not helping to use heap as this is same time complexity as any good sort algorithm
+    #but would be valid first attempt, and then could explain that, and then say i wnt to be able to make use of O(n)ness of heapify, so what if we could...
+    #and then try approach where change to list and then heapify
   #T:O(nlogn) M: O(n)
   def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         minHeap = []

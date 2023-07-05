@@ -28,7 +28,9 @@ class Solution:
 
         #smart to just do this here to make if statement logic easier
         #if want second biggest number of 6 len list, will be in 4th index
-        #this will be index we want it in henceforth, need to do bc otherwise index is index + 1 smallest value after each partition as all to left are smaller and all to right are bigger
+        #this will be index we want it in henceforth, need to do bc index is index + 1 smallest value after each partition
+        #as all to left are smaller and all to right are bigger, so need to adjust since we are looking for kth largest 
+        #(and doing it up here and changing the var means we don't have to keep rewriting it below)
         k = len(nums) - k
 
         #could also do while l < r, but will only get there if never get to k = pivot which is not possible

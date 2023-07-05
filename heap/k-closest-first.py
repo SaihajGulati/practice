@@ -11,7 +11,7 @@ class Point:
         return [self.x, self.y]
 
 class Solution:
-  #since ends up nlogn bc of separate pushes, is useless use of heap as any good sort algorithm is nlogn
+  #since ends up nlogn bc of separate pushes, is not helping to use heap as this is same time complexity as any good sort algorithm
   #T:O(nlogn) M: O(n)
   def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         minHeap = []

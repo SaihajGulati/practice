@@ -18,6 +18,8 @@ class Solution:
         heapq.heapify(minHeap)
 
         res = []
+
+        #O(k)
         for i in range(k):
             #this variable naming setup in python is cracked
             dist, x, y = heapq.heappop(minHeap)

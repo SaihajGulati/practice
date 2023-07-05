@@ -6,7 +6,8 @@ class Solution:
         #is same time complexity so all good
       
         #averagish case is O(n) with O(1) extra memory since setting to neg in place, but if k is close to n then approaches nlogn time complexity
-        
+
+        #make negative so that when python does minheap which is all it can do, we get max heap
         for i in range(0, len(nums)):
             nums[i] = - nums[i]
 

@@ -18,5 +18,5 @@ class Solution:
         for i in range(k):
             res = heapq.heappop(nums)
 
-        #last res is the one we want since does k times
+        #last res is the one we want since does k times, remember to switch sign since we switched them above
         return -res

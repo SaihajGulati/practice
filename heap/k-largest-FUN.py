@@ -13,7 +13,7 @@ class Solution:
         heapq.heapify(nums)
         res = 0
 
-        #klogn time so depends on k --> k close to n size makes nlogn but if that is worst case that's p good
+        #klogn time so depends on k --> k close to n size makes nlogn but if that is worst case of worst case that's p good
         for i in range(k):
             res = heapq.heappop(nums)
 

@@ -6,7 +6,9 @@ class Solution:
 
         #O(n) operation
         for x, y in points:
-            dist = sqrt(x**2 + y**2)
+            #avoid doing sqrt as is unnecessary because we don't need actual distance, 
+            #just what is bigger/smaller which can be checked without sqrt being there as it won't change relative largeness
+            dist = x**2 + y**2
             minHeap.append([dist, x, y])
 
         #heapify automatically sorts by first value in array

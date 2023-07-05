@@ -23,5 +23,6 @@ class Solution:
         #O(nlogn) operation bc each push requires make logn swaps and doing n times
         for x, y in points:
             heapq.heappush(minHeap, Point(x, y))
-        
+
+        #O(k)
         return [heapq.heappop(minHeap).listify() for i in range (0, k)]

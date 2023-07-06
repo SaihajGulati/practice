@@ -3,7 +3,8 @@ class Solution:
         #T: O(2^n * n) bc making copy part in base case as well as while loop are worst case N and have to do 2^n calls bc if all distinct, 
         #then 2^n subsets and have to do a call to get each one. Reason why 2^n is because each element can either be included or not
         #so, each level of the tree has two times the number of calls as last level, and we have n levels, so biggest order is bottom at 2^n
-        #Extra M: O(n) for subset max size, because list outputting is ofc required so is not extra, but total memory is O(2^n)
+        #Extra M: O(n) bc of subset, because list outputting is ofc required so is not extra
+        #but total memory is O(2^n * n) because max subset size is n and 2^n subsets
         
         res = [] # same as passing it each time bc is reference either way
         subset = [] #same as passing it each time bc either way is reference

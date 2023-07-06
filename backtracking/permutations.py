@@ -4,7 +4,7 @@ class Solution:
         #T: O(N*N!) bc similar to most, bottom part/leaves dominates number of calls
         #and the leaves are permutations which by math there are n! of
         #takes n work each time max, because of both base case and for loop
-        #M: O(N!) if talking about what we are returning, which is all permutations
+        #M: O(n*N!) if talking about what we are returning, which is all permutations (n!) * n (size of each)
         #Extra space is possibly on O(n) because recursion goes till n+1 layers max so recursive stack's max size is that
         #in other languages have to pass nums and res too in separate ofc
         def dfs(start):

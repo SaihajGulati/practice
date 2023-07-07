@@ -28,6 +28,7 @@ class Solution:
                 return False
 
             #will be copy, which need so that can remove from original set without losing the values needed
+            #can't use slice hack to save a bit of memory here because deque doesn't allow list slicing
             tempDests = list(originTo[origin])
 
             #range is a function that is called once so will only check length at first

@@ -5,8 +5,8 @@ class Solution:
         itinerary = ["JFK"]
 
 
-        #T: O(E^2) which is numer of tickets because though dfs is O(V+E) and here E dominates because could be multiple destinations for a origin, backtracking means could go through all of them each time so O(E*E) 
-        # M: O(V+E) which is adjacency list and here simplifies to O(E) bc of adjacency list storing all tickets essentially and bc of recrusive call stack at once having up to E bc runs, checks all till end, and then continues
+        #T: O(E^2) = O(n^2) because though dfs is O(V+E) and here E dominates because could be multiple destinations for a origin, backtracking means could go through all of them each time so O(E*E) 
+        # M: O(V+E) which is adjacency list and here simplifies to O(E) = O(n) bc of adjacency list storing all tickets essentially and bc of recrusive call stack at once having up to E bc runs, checks all till end, and then continues
 
         #puts all the tickets in sorted order automatically when put into deque
         tickets.sort()

@@ -1,11 +1,11 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         #T: O(ElogE) because each time add to heap, log(number of stuff in heap) time --> can become O(ElogV) 
+        #number of stuff in heap is max V really actually, as only add if not in tree 
+        #so time becomes O(ElogV) = O(n^2logn)
         #S: O(V + E) which is adjacency list bc V number of keys and each has it's edges number of elements so total is sum of v and e
         #since fully connected graph E = V^2, so space can simplify to either O(E) or O(V^2) which is O(n^2)
-        Ebecause in heap code below, since don't add if is already in tree, heap will have max one of each node which is V,
-        #ElogV becomes n^2logn as edges from all edges to each other (n^2) and n is number of points/nodes
-        #S:
+        
         #literally MST, so can use Prim's or Reverse-Delete or Kryskall's
         
         #first make adjacency list that stores [cost, node]

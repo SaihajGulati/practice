@@ -9,6 +9,8 @@ class Solution:
         # M: O(V+E) which is adjacency list and here simplifies to O(E) = O(n) bc of adjacency list storing all tickets essentially and bc of recrusive call stack at once having up to E bc runs, checks all till end, and then continues
 
         #puts all the tickets in sorted order automatically when put into deque
+        #bc list of lists is sorted like alphabetical, where checks first one first, and then if equal then second one...which means
+        #this will become list of tickets sorted first by origin and then destination
         tickets.sort()
 
         #fills hash map with all possible destinations for each origin

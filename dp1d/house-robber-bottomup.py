@@ -10,5 +10,6 @@ class Solution:
             temp = max(i + two, one)
             two = one
             one = temp
-        
+
+        #have to max them since this way gives two choices for where to start that is never handled
         return max(one, two)

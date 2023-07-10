@@ -1,6 +1,7 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
       #top-down
+        #rob1 is one two before current house
         rob1 = 0
         rob2 = 0
 

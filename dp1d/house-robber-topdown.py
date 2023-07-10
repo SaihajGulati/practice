@@ -10,5 +10,5 @@ class Solution:
             rob1 = rob2
             rob2 = temp
 
-      #here since maxing each time, just return last one
+      #here since maxing each time handles start choosing, just return last one
         return rob2

@@ -1,5 +1,6 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
+        #T: O(n) M: O(1)
         #end is exclusive
         def helper(start, end):
             one = 0

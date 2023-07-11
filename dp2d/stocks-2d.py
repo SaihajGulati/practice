@@ -7,7 +7,7 @@ class Solution:
         #T: O(n) bc 2n in array, so will run max that many times too since other times will just use that solution
         #M: O(n) bc of array
         #leetcode says this is slightly faster and less memory, maybe just bc array indexing simpler than hashing tuple
-        #this code relies on fact that boolean uses 0 and 1 values
+        #this code relies on fact that boolean uses 0 and 1 values, could ofc manually subtract 1 or add to change too if didn't for some reason
 
         #row for each price with two spots in it for buying/selling
         dp = [[None] * 2 for i in range(len(prices))]

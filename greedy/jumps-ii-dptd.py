@@ -1,27 +1,19 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        #top-down dp, worst bc of memory issue here bc rewriting front
+        #top-down (moving foward) dp, WORST bc of memory issue here bc rewriting front
         # T: O(n^2) bc for each i (no total), you go jumps number of times which can be at worst all of n
-        # Extra M: O(N)
-        numJumps = [1001] * len(nums)
+        # Extra M: O(N) bc extra array needed
+
+        #need max ni right now so below min automatically replaces each time even if size of array is bigger than max value (1001)
+        #which ccould lead to number of jumps bigger than 1001 and don't want 1001 becoming min
+        #good to be safe and just use inf for this situation
+        numJumps = [float("inf")] * len(nums)
         numJumps[0] = 0
         for i in range(len(nums)):
             for j in range(i + 1, min((i + nums[i] + 1), len(nums))):
                 numJumps[j] = min(1 + numJumps[i], numJumps[j])
                 print(numJumps[j])
         print(numJumps)  
-        return numJumps[-1]
-                hes for this window
-            farthest = 0 #technically could/should be l, but either way bc first max below will override
-            #window of new values included by last time went farthest
-            for i in range(l, r + 1):
-                #compute farthest we can end up with this batch of jumps
-                farthest = max(farthest, i + nums[i])
-            l = r + 1 #bc this is where new values start
-            r = farthest
-            numJumps += 1 #bc this window check means one jump is taken 
-        
-        return numJumps
 
 
                 

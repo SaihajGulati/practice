@@ -1,7 +1,7 @@
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         # T: O(n)
-        # M: O(1) if don't calculate diff and store first 
+        # M: O(1) since calculating difference in loop for each, not storing anything in list
 
         #if don't have enough gas to cover the costs (needs to cover all since need to go through all but can do so through any order)
         if sum(gas) < sum(cost):

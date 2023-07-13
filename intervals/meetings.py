@@ -27,7 +27,7 @@ class Solution:
         prevEnd = float("-inf")
 
         for i in intervals:
-            #means is overlapping since the start is guaranteed to be the same or bigger
+            #means is overlapping since the start is guaranteed to be the same or bigger than last one's start
             if i.start < prevEnd:
                 return False
             else: #need to update prevEnd

@@ -3,6 +3,7 @@ class Solution:
         #to store previous interval
         
         #sort by the 0/start value for each x in intervals
+        #this ensures that in if statements below, don't have to worry about start values  
         intervals.sort(key = lambda pair: pair[0])
 
         result = [intervals[0]]

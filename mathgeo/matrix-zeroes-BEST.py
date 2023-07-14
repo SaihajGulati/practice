@@ -8,7 +8,7 @@ class Solution:
         # this way below is faster than Neet bc of for loop at start instead of if statement check each time in loop
         #and bc only go through rows and columns needed with for loops at the end, 
         #while neet's code ends up going through all and then checking if need to zero
-        #AND even frst that first row, i don't go through all of it, only till see first zero, which can help if big row size
+        #AND for that first row, i don't even go through all of it necesarily, only till see first zero, which can help if big row size
 
       
         #for first row (first cell in column data holder), use zeroth row variabled

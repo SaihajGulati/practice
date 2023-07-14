@@ -1,6 +1,6 @@
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        # T: O((mn)
+        # T: O(mn)
         # M: O(1)
         # this way below is slower than mine bc of fof if statement check each time in loop instead of doing first row seperately first which is no extra work
         #and that way doesn't even go through first row fully either which saves time

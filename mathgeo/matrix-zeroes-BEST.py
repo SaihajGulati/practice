@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        # T: O((mn)
+        # T: O(mn)
         # M: O(1)
         # this way below is faster than Neet bc of for loop at start instead of if statement check each time in loop
         #and bc only go through rows and columns needed with for loops at the end, 

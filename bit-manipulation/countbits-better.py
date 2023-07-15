@@ -9,7 +9,8 @@ class Solution:
 
         #will be number that is the power of the place
         #ex 32 if place is 5
-        #slightly faster than my og solution bc naturally calculating power each time for no reason takes a bit longer
+        #slightly faster than my og solution bc calculating power each time in loop takes longer
+        #than straight multiplication
         placeOffset = 1
 
         #smarter to just store

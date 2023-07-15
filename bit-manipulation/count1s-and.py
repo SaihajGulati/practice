@@ -4,7 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        #T: 0(32) bc length is set
+        #T: 0(# of 1s)
         count = 0
         while n:
             #each time, removes a one present in n

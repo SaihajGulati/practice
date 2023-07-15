@@ -15,9 +15,19 @@ class Solution:
 
         #smarter to just store
         for i in range(1, n + 1):
+            #so if this number has reached the next place, then change place and put 1 bc it is the next place/power
+            if placeOffset * 2 == i:
+                dp[i] = 1
+                placeOffset = i
+            #will be 
+            else:
+                dp[i] = 1 + dp[i - placeOffset]
+            
+            """ simpler code way that's slower bc requires you to so subtraction of potentially large numbers even when you konw will end up 0
             #so if this number has reached the next place, then change placeOffset bc this is the next power of 2
             if placeOffset * 2 == i:
                 placeOffset = i
             #will be 
             dp[i] = 1 + dp[i - placeOffset]
+            """
         return dp

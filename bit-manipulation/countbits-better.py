@@ -22,7 +22,7 @@ class Solution:
             else:
                 dp[i] = 1 + dp[i - placeOffset]
             
-            """ simpler code way that's slower bc requires you to do subtraction of potentially large numbers even when you know will end up 0 (+1)
+            """ simpler code that's slower bc requires you to do subtraction of potentially large numbers even when you know will end up 0 (+1)
             #so if this number has reached the next place, then change placeOffset bc this is the next power of 2
             if placeOffset * 2 == i:
                 placeOffset = i

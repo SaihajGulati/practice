@@ -19,7 +19,6 @@ class Solution:
             if placeOffset * 2 == i:
                 dp[i] = 1
                 placeOffset = i
-            #will be 
             else:
                 dp[i] = 1 + dp[i - placeOffset]
             

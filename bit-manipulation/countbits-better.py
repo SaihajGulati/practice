@@ -14,7 +14,7 @@ class Solution:
 
         #smarter to just store
         for i in range(1, n + 1):
-            #so if this number has reached the next place, then change place
+            #so if this number has reached the next place, then change placeOffset bc this is the next power of 2
             if placeOffset * 2 == i:
                 placeOffset = i
             #will be 

@@ -26,10 +26,19 @@ class Solution:
 
         #2. the Os that are left are part of regions that are surrounded bc not marked t by above
         #capture rest (all that is left are surrounded)
+
+        #could do both in this loop
+        #tho it's not even be an optimization as if statement added here vs not before 
+        #so kinda same (as long as change Os to Xs first, works bc this loop only sees each index once)
+        #and other way is clearer and safer so that's better
         for r in range(ROWS):
             for c in range(COLS):
                 if board[r][c] == "O":
                     board[r][c] = "X"
+                """
+                elif board[r][c] == "T":
+                    board[r][c] = "O"
+                """
 
         #3. the Ts need to be changed back to Os
         #change the unsurrounded areas back from their temp state

@@ -3,7 +3,7 @@ class Solution:
         res = ""
         resLen = 0
         #T: O(n^2) bc check up to entire string (n) for each middle letter (n times)
-        #M: O(1)
+        #M: O(1) in terms of extra bc only memory is res which is the longest palindromic substring we are supposed to return
         #Approach: try each one as a middle of the palindrome
         #better than checking start of palindrome bc checking that is horrific timewise bc have to do length of string for each check while this builds up so each check is just an if statement
         #requires checking if is even size and odd size

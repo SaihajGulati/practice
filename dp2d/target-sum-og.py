@@ -9,7 +9,7 @@ class Solution:
 #M: O(nt)
   
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        dp = {} #use hashmap bc with 2d array in other languages cannot have null as starting value so no way to set starting value to somethig will never reach
+        dp = {} #use hashmap bc with 2d array in other languages cannot have null as starting value for ints so no way to set starting value to something will never reach
         def dfs(index, sumLeft):
             #only way bc has to be that at end have reached target
             if index == len(nums):

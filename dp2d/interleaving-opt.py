@@ -20,6 +20,7 @@ class Solution:
         #handles bottom row so that can do in one row in loop below and don't need weird if condition (means also can do from one less in loop)
         for j in reversed(range(len(s2))):
             #since is bottom row, len(s1) instead of i
+            #could put this in one line as setting dpRow since there is not second thing to check like below
             if s2[j] == s3[len(s1) + j] and dpRow[j + 1]:
                     dpRow[j] = True
 

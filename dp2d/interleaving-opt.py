@@ -26,6 +26,7 @@ class Solution:
         for i in reversed(range(len(s1))):
             newRow = [False] * (len(s2) + 1)
             #have to put last one of newRow to what would be if loop went all the way
+            #is just the core condition of the first if statement, bc second isn't checked bc of both elif AND bc is at length of j
             #to avoid weird if condition mainly (but if do this, do not go all the way to the edge)
             newRow[-1] = s1[i] == s3[i + len(s2)] and dpRow[len(s2)]
 

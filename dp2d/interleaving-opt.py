@@ -17,7 +17,7 @@ class Solution:
         dpRow = [False] * (len(s2) + 1)
         dpRow[-1] = True #bc at start this is the part that is off the lens for both
 
-        #handles bottom row so that can do in one go in loop below
+        #handles bottom row so that can do in one row in loop below and don't have to weird if condition
         for j in reversed(range(len(s2))):
             #since is bottom row, len(s1) instead of i
             if s2[j] == s3[len(s1) + j] and dpRow[j + 1]:
@@ -26,6 +26,7 @@ class Solution:
         for i in reversed(range(len(s1))):
             newRow = [False] * (len(s2) + 1)
             #have to put last one of newRow to what would be if loop went all the way
+            #to avoid weird if condition
             newRow[-1] = s1[i] == s3[i + len(s2)] and dpRow[len(s2)]
 
             for j in reversed(range(len(s2))):

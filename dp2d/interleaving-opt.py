@@ -17,7 +17,7 @@ class Solution:
         dpRow = [False] * (len(s2) + 1)
         dpRow[-1] = True #bc at start this is the part that is off the lens for both
 
-        #handles bottom row so that can do in one row in loop below and don't have to weird if condition (means also can do from one less in loop)
+        #handles bottom row so that can do in one row in loop below and don't need weird if condition (means also can do from one less in loop)
         for j in reversed(range(len(s2))):
             #since is bottom row, len(s1) instead of i
             if s2[j] == s3[len(s1) + j] and dpRow[j + 1]:

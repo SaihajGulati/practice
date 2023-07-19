@@ -3,9 +3,11 @@ class Solution:
 #neet solution is super similar but instead of sumLeft, he does sum
 #that means if statement checks if sum == target, not 0, and this method is initially called with backtrack(0, 0) instead of 0, target
 
-#T: O(nt) where go through each index, and for reach the sumLeft is in range 0 to target plus total of array values summed up which is 2 times it (2t) so O(t)
+#T: O(nt) where go through each index, 
+  #and for reach the sumLeft is in range 0 to target plus total of array values summed up which is 2 times it (2t) so O(t) * O(n)
+#where t is sum of entire array values summed up
+#M: O(nt)
   
-#M: O(i
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         dp = {} #use hashmap bc with 2d array in other languages cannot have null as starting value so no way to set starting value to somethig will never reach
         def dfs(index, sumLeft):

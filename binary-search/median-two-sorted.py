@@ -1,5 +1,5 @@
 # Time: log(min(n, m))
-#is a binary search through smallest of two arrays until find correct partition
+#is a binary search through smaller of two arrays until find correct partition and therefore correct median
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         #A and B are the two arrays given, goal is to have A be smaller one

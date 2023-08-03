@@ -7,6 +7,7 @@ class Solution:
 
         #imagine dp is from 0 left to amount left
         for i in range(1, amount + 1):
+            #coculd and should use amount + 1 as starting max value bc max number of coins is amount if all 1s
             minCoins = float("inf")
             #have to try every coin
             for c in coins:

@@ -2,6 +2,7 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         # T: O(amount * len(coins) M: O(amount)
         #if start with all zeros, then need manual tracking of min below
+        #if start with amount + 1 as start of min value below, this is more intuitive than other version slightly and that's good, work with this then
         dp = [0] * (amount + 1) #start with this as base value
 
 

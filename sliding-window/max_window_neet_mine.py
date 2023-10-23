@@ -27,6 +27,8 @@ class Solution:
             
             #add to end of list, as is either a new max
             #or a new value to be put in line to be max one day possibly
+            #SMART PART: putting in index instead of value, since don't have to sort by value or anything
+            #if really wanted could also be tuple but no need
             q.append(right)
 
           #only add to output array if have a valid k window (bc at start are starting from index = 0 and haven't formed even one window yet but have a max)

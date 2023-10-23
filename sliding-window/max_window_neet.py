@@ -12,7 +12,9 @@ class Solution:
             while q and nums[q[-1]] < nums[r]:
                 q.pop()
             
-          q.append(r)
+            #SMART PART: putting in index instead of value, since don't have to sort by value or anything
+            #if really wanted could also be tuple but no need
+            q.append(r)
 
             # remove left val from window
             #since appended before this, don't have to do q check here --> SMART  

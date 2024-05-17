@@ -1,4 +1,4 @@
-# O(n) time complexity, O(n) memory complexity but 3 lists
+# O(n) time complexity, O(n) memory complexity with a hashmap of size n, another list of size n, and a result list of size k
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         count = {}

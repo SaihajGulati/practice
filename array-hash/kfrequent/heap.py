@@ -1,5 +1,5 @@
-#O(klogn) time complexity O(n) memory, 2 lists, object creation overhead, and O(k) heap
-
+#O(klogn) time complexity
+#O(n) memory but probably worst because hashmap of size n, another list of size n with object creation overhead, and result list of size k
 class Element:
     def __init__(self, el: int, freq: int):
         self.el = el

@@ -16,6 +16,7 @@ class Solution(object):
             elif (total < target and i < len(candidates)):
                 curr.append(candidates[i])
                 #check first option, which is having this (next one is also this though because unlimited number of times until backtrack)
+                #works because tries all that have this value at this spot, so literally every option is checked
                 helper(i, total + candidates[i])
                 
                 #undo

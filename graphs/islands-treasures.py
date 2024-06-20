@@ -1,6 +1,6 @@
 #T: O(mn) run through grid twice including first for loop but constant doesn't change
 #M: O(mn) because of visited set
-#smart part is that instead of going from land pieces to treasure (mn)^3, doing bfs from all treasure simultaneiously
+#smart part is that instead of going from land pieces to treasure (mn)^3, doing bfs from all treasure simultaneously
 #so, anything visited already has minimum distance applied to it, because doing in rounds, so don't visit or touch again
 
 class Solution:

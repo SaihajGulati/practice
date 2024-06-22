@@ -1,3 +1,8 @@
+#A nice little Dijkstra's
+#T: O(ELogV) bc max number in the minHeap is V^2, because no repeats in the minHeap so worst case edges to every other node
+#and then logV^2 simplifes to 2logV, and max E operations of popping from minHeap depending on which is bigger
+#so simplifies to O(ELogV)
+#M: O(V^2)
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         graph = collections.defaultdict(list)

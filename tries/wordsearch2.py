@@ -4,6 +4,11 @@
 
 #T: O(NML + Ws)
 #M: O(NM + Ws)
+#N is number of cells on board (n*m)
+#M is total number of words need to search for
+#L is average length of a word bc of the prefix tree, while W is 
+#Ws is total number of nodes in the trie we build
+
 class TrieNode:
     def __init__(self, isWord = False):
         self.isWord = isWord

@@ -7,6 +7,7 @@ class TrieNode:
         self.isWord = isWord
         self.children = {}
     #from neet's final solution, he calls remove in the if statement that adds to result
+    #and of course call add where I do the work in the first for loop
     # def addWord(self, word):
     #     cur = self
     #     cur.refs += 1

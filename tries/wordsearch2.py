@@ -2,6 +2,7 @@
 #my way doesn't remove the word from the trie, his final solution does
 #his way ends up slightly faster, but way more work happening in memory
 
+#Probably Wrong Analysis
 #T: O(NML + Ws)
 #M: O(NM + Ws)
 #N is number of cells on board (n*m)

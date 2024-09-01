@@ -1,6 +1,8 @@
 #has much better memory than neet's way
 #my way doesn't remove the word from the trie, his final solution does
 #his way ends up slightly faster, but way more work happening in memory
+#coding it myself was super fun, and I found out I don't need to fit confines of his solution, and I learned so much more that way too
+#especially if look at how can avoid set with isWord = False, but set also works, idk is just cool
 
 #Probably Wrong Analysis
 #T: O(NML + Ws)

@@ -1,4 +1,4 @@
-#has better memory than neet's way
+#has much better memory than neet's way
 #my way doesn't remove the word from the trie, his final solution does
 #his way ends up slightly faster, but way more work happening in memory
 

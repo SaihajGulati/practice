@@ -44,7 +44,7 @@ class Solution:
 
         rows = len(board)
         cols = len(board[0])
-        visited = [[0] * cols for i in range(rows)]
+        visited = [[0] * cols for i in range(rows)] #visited can be a set of tuples too, not much difference either way
         word = ""
         result = set()
 

@@ -6,8 +6,8 @@ class TrieNode:
     def __init__(self, isWord = False):
         self.isWord = isWord
         self.children = {}
-    #from neet's final solution, he calls root.remove in the if statement that adds to result
-    #and of course call root.add where I do the work in the first for loop
+    #from neet's final solution, he calls root.removeWord in the if statement that adds to result
+    #and of course call root.addWord where I do the work in the first for loop
     # def addWord(self, word):
     #     cur = self
     #     cur.refs += 1

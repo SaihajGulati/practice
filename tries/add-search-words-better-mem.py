@@ -15,6 +15,7 @@ class WordDictionary:
         #smart to do so here so don't have to worry below
         #need root like this instead of head pointer because:
         #allow for true root always being maintained because otherwise you never know the true root of the tree because it couold be rewritten anytime a word with a different first letter is added
+        #is a dummy node essentially, core strat for coding interviews
         self.root = Node()
     
     def addWord(self, word: str) -> None:

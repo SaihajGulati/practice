@@ -2,6 +2,8 @@
 #my way doesn't remove the word from the trie, his final solution does
 #his way ends up slightly faster, but way more work happening in memory
 
+#T: O(NML + Ws)
+#M: O(NM + Ws)
 class TrieNode:
     def __init__(self, isWord = False):
         self.isWord = isWord

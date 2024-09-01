@@ -5,8 +5,8 @@
 #         self.left = left
 #         self.right = right
 
-#T: O(n)
-#M: O(n) bc number of edges traveled which for tree is number of nodes minus 1
+#T: O(n) bc number of edges traveled which for tree is number of nodes minus 1
+#M: O(n) bc the largest level  will be the largest queue situation, and that can be at most close to the size of the entire tree
 
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:

@@ -28,6 +28,7 @@ class Solution:
                 hours += math.ceil(p/m)
                 #this condition seems to slow the code down
                 #probably because have to check it every time for a good solution which is most of the ones we will look at so barely saves time but adds hella bc need to check each time for p in pile
+                #actually DUHHH it's a check when have one below and doing O(1) math operation above 
                 """if hours > h:
                     break"""
 

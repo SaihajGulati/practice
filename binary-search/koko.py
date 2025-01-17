@@ -33,7 +33,7 @@ class Solution:
 
             #if get here, either hours is more than h, or finished last pile with 0+ hours to spare
             if hours <= h:
-                k = min(m, k)
+                k = m
                 high = m - 1
             #speed is too slow, so need to check higher only
             else:

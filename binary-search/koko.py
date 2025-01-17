@@ -11,6 +11,8 @@ class Solution:
             return k
         
         #otherwise need to do binary search bw 1 and max
+        """or can do this preprocessing to get minimum, is O(piles) which might be too much
+        low = math.ceil(sum(piles)/h)"""
         low = 1
         high = k
 

@@ -9,6 +9,7 @@ class Solution(object):
         one, two = 1, 1
 
         #only n - 1 times
+        #each time, getting number of ways to get to that stair
         for i in range(n-1):
             temp = one + two
             #move two back to where one is right now

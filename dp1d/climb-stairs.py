@@ -9,7 +9,8 @@ class Solution(object):
         one, two = 1, 1
 
         #only n - 1 times
-        #each time, getting number of ways to get to that stair
+        #each time, getting number of ways to get to that stair, temp = one + two because from one down or two down
+        #range(n-1) because this is from 2 to n (inclusive)
         for i in range(n-1):
             temp = one + two
             #move two back to where one is right now

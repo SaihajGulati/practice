@@ -13,7 +13,8 @@ class Solution:
                 else:
                     x = 3 * x + 1
             stepList.append((i, steps))
-        
+
+        #1,0 because sorting by number of steps/power first, and then use actual value as tiebreaker if needed
         sortedList = sorted(stepList, key = operator.itemgetter(1, 0))
 
         return sortedList[k-1][0]

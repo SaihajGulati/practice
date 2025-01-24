@@ -1,7 +1,7 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
 
-        # T: O(nlogn)
+        # T: O(n)
         # M: O(n)
         stack = [] 
         res = [0] * len(temperatures)

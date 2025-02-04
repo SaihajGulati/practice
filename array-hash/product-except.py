@@ -1,7 +1,7 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         #T: O(n)
-        #T: O(1)
+        #T: O(1) bc using output in between to build
         result = [0] * len(nums)
         result[0] = 1 #will be changing stuff here, not changing nums which is a good practice generally
         #result will have running left products (prefix)
